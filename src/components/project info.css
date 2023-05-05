@@ -80,7 +80,7 @@
 
 #project-info #game-description{
     width: 60%;
-    min-height: 150px;
+    min-height: 128px;
     position: relative;
     z-index: 10;
     backdrop-filter: blur(5px);
@@ -107,5 +107,6 @@
 
     #project-info #game-description{
         width: 85%;
+        min-height: 64px;
     }
 }
