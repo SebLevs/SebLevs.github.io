@@ -27,6 +27,11 @@
 
 @media (max-width: 1195px){
     .notable-info .work-section .work-panel .credits .credit-panel{
-        width: 95%;
+        width: 35%;
+        min-height: 64px;
+    }
+
+    .notable-info .work-section .work-panel .credits .credit-panel .employee-name{
+        font-size: 10px;
     }
 }

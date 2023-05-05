@@ -80,6 +80,14 @@
 }
 
 @media (max-width: 1195px){
+    .notable-info .work-section .work-type{
+        font-size: 16px;
+    }
+
+    .notable-info .work-panel .panel-title{
+        font-size: 12px;
+    }
+    
     .notable-info .work-panel .panel-info{
         flex-direction: column;
     }
