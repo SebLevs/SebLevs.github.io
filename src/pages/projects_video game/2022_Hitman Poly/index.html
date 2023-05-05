@@ -54,8 +54,8 @@
             <div id="game-img-and-links">
                 <img id="game-banner" src="./assets/images/title banner.png">
                 <div id="links-icon">
-                    <a href="https://github.com/SebLevs/Simple-Space-Invader" target="blank"><img src="../../../components/assets/icons/icon_Github.svg"></a>
-                    <a href="https://ludwellstudio.itch.io/simple-space-invader" target="blank"><img src="../../../components/assets/icons/Icon_Itch.png"></a>
+                    <a href="https://github.com/SebLevs/HitmanPolyGit" target="blank"><img src="../../../components/assets/icons/icon_Github.svg"></a>
+                    <a href="https://ludwellstudio.itch.io/hitmanpoly" target="blank"><img src="../../../components/assets/icons/Icon_Itch.png"></a>
                 </div>
             </div>
             <div id="info-container">
@@ -65,45 +65,54 @@
                 </div>
                 <div class="info"> <!--Production date-->
                     <img src="../../../components/assets/icons/icon_calendar.svg">
-                    <div>Winter 2020</div>
+                    <div>Autumn 2022</div>
                 </div>
                 <div class="info"> <!--Production duration-->
                     <img src="../../../components/assets/icons/icon_clock.svg">
-                    <div>4 weeks</div>
+                    <div>5 weeks</div>
                 </div>
                 <div class="info"> <!--Project Genre-->
                     <img src="../../../components/assets/icons/icon_tag.svg">
-                    <div>Action | Arcade</div>
+                    <div>3D | FPS</div>
                 </div>
                 <div class="info"> <!--Team size-->
                     <img src="../../../components/assets/icons/icon_user.svg">
-                    <div>1</div>
+                    <div>3</div>
                 </div>
             </div>
             <div id="game-description" class="j">
-                This project was made within an arcade game cloning club a few colleagues and I started at the <span class="b s c">beginning of our DEC at LaSalle college</span>.
+                Hitman Poly is a first-person shooter where the <span class="c b s">player must eliminate a target and then extract from a city</span>.
                 <br/><br/>
-                The main goal of this project was to <span class="b s c">familiarize myself with the Unity engine</span> while trying to <span class="b s c">replicate as closely as possible the logic of the Space Invaders</span> game.
+                My primary job on this project was the <span class="c b s">UI</span>, but I also worked on the 
+                <span class="c b s">object interaction system</span>, 
+                the <span class="c b s">scene management system</span>, and the <span class="c b s">audio system</span> as well as 
+                the <span class="c b s">entity hierarchy</span>.               
             </div>
         </section>
         <section class="notable-info"> <!--index.css-->
             <div class="work-section">
                 <div class="work-type b s">PROGRAMMING</div>
-                <div class="work-panel"> <!--ACSII and destructible buildings-->
-                    <div class="panel-title">ASCII and destructible <span class="c b s">buildings</span></div>
+                <div class="work-panel">
+                    <div class="panel-title">Towards a <span class="c b s">modular UI</span> system</div>
                     <div class="panel-info">
                         <video class="primary-visual" controls autoplay muted loop>
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            Each <span class="c b s">building is made out of 1x1 pixel blocs</span>. 
-                            Each bloc is instantiated <span class="c b s">from a two-dimensional array of characters</span> (ASCII). 
-                            It surprises me to this day that I actually went through with this tedious task.
+                            The UI system produced for this project uses a simple <span class="c b s">layered hierarchy</span> where a 
+                            <span class="c b s">singleton UIManager</span> contains <span class="c b s">UIViews</span> (any specific UI "screen"). 
+                            The UIViews are game objects, and they can have as many <span class="c b s">UIElements</span> (button, selectables, etc) as needed.
                             <br/><br/>
-                            <span class="c b s">Every bloc</span> of a building <span class="c b s">can be destroyed</span>.
-                            <br/>
-                            When a <span class="c b s">projectile hits a bloc</span>, a couple of the bloc's 
-                            <span class="c b s">nearest blocs are also destroyed</span>.
+                            A <span class="c b s">system of show/hide exists on every UIView</span>. 
+                            The base implementation implies a fade-in and fade-out respectively, 
+                            but a custom implementation <span class="c b s">can be extended easily on any UIView concretion</span>.
+                            <br/><br/>
+                            <span class="c b s">UIElements</span> can have their own concretion where needed for <span class="c b s"> 
+                            custom behaviours such as a filling bar, a number counter, a text printer, etc</span>.
+                            <br/><br/>
+                            A system of 
+                            <span class="c b s"> Action (C#) is used as a callback system to chain up views </span> 
+                            <span class="c b s">behaviours and/or transitions</span> as needed when a show or a hide is completed.
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -113,34 +122,111 @@
                         <video class="secondary-visual" controls autoplay muted loop>
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
-                        <img class="secondary-visual" src="./assets/images/title banner.png">
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title">A <span class="c b s"> pickable</span> object for everyone</div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            A system was implemented to <span class="c b s">allow any entity to pickup, drop or use</span> an object.
+                            <br/><br/>
+                            A <span class="c b s">simple hierarchy</span> is used where a base class "Pickable" has children such as "Throwable" and "Weapon". 
+                            Behaviour such as <span class="c b s">OnPickup, OnDrop and OnAttack are used to dictate what happens based on the concretion</span> at hand.
+                            <br/><br/>
+                            A throwable would fly away OnAttack whereas a ranged weapon would fire a bullet for example.
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title"><span class="c b s">Asynchronous scene management</span></div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            Scenes both <span class="c b s">load and unload in an asynchronous manner</span> when required.
+                            <br/><br/>
+                            A <span class="c b s">multiple scene hierarchy</span> is used in Unity to 
+                            <span class="c b s"> avoid reloading managers and other singleton objects </span> 
+                            that should always exists in the game environment.
+                            <br/>
+                            A <span class="c b s">base scene</span> contains every persistent manager and singleton.
+                            <br/>
+                            The <span class="c b s">other scenes</span> can be <span class="c b s">loaded when required</span>.
+                            <br/><br/>
+                            This allows for <span class="c b s">decoupling every scene from any system it doesn't use or that it doesn't require</span>.
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title"><span class="c b s">Audio system</span></div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            A simple <span class="c b s">double layered system</span> was used for this project.
+                            <br/><br/>
+                            An <span class="c b s">AudioController</span> concretion containing <span class="c b s">AudioElements</span> is 
+                            used to call either a <span class="c b s">random sound or a specific sound</span> from any given AudioElement.
+                            <br/><br/>
+                            An <span class="c b s">audio source</span> can be set <span class="c b s">for every AudioController</span> to allow 
+                            for a <span class="c b s">better 3D layering</span> of the sound if need be.
+                            <br/><br/>
+                            <u>Retrospective</u>
+                            <br/>
+                            This system <span class="c b s">still needs a lot of work</span> to make it as modular as it should, 
+                            but it <span class="c b s">does what it has to do</span>.
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
             <div class="work-section">
                 <div class="work-type">DESIGN</div>
-                <div class="work-panel"> <!--ACSII and destructible buildings-->
-                    <div class="panel-title">ASCII and destructible <span class="c b s">buildings</span></div>
+                <div class="work-panel">
+                    <div class="panel-title"><span class="c b s">Teaching</span> the player with a <span class="c b s">text-based tutorial</span></div>
                     <div class="panel-info">
                         <video class="primary-visual" controls autoplay muted loop>
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            Each building is made out of 1x1 pixel blocs. Each bloc is instantiated from a two-dimensional array of characters (ASCII). It surprises me to this day that I actually went through with this tedious task.
+                            A text-based tutorial was implemented to <span class="c b s">facilitate the learning of mechanics and goals</span> of 
+                            the game.
                             <br/><br/>
-                            Every bloc of a building can be destroyed.
-                            <br/>
-                            When a projectile hits a bloc, a couple of the bloc's nearest blocs are also destroyed.
+                            The player <span class="c b s">can skip the tutorial</span> by pressing the 
+                            <span class="c b s">key that would usually close the screen</span> 
+                            he or she is viewing at that time.
+                            <br/><br/>
+                            Although <span class="c b s">retention is far less prominent</span> with such a boring teaching process, 
+                            our <span class="c b s">lack of time</span> to produce a good learning experience 
+                            <span class="c b s">made this over nothing a viable solution</span>.
                         </div>
                     </div>
                     <div class="bottom"> 
-                        <video class="secondary-visual" controls autoplay muted loop>
-                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
-                        </video>
-                        <video class="secondary-visual" controls autoplay muted loop>
-                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
-                        </video>
-                        <img class="secondary-visual" src="./assets/images/title banner.png">
                     </div>
                 </div>
             </div>
@@ -150,10 +236,34 @@
                     <div class="panel-title">Programming</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-name">Sébastien Lévesque (Ludwell)</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>UI</li>
+                                    <li>Object interaction</li>
+                                    <li>Scene load management</li>
+                                    <li>Audio</li>
+                                    <li>Entity hierarchy</li>
+                                    <li>Misc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">Marc-Antoine Giguère (Power Key)</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Three Cs</li>
+                                    <li>Weapons</li>
+                                    <li>Gameplay</li>
+                                    <li>Misc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">Steven</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>AI</li>
                                 </ul>
                             </div>
                         </div>
@@ -163,10 +273,28 @@
                     <div class="panel-title">Design</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-name">Sébastien Lévesque (Ludwell)</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>UI</li>
+                                    <li>Gameplay</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">Marc-Antoine Giguère (Power Key)</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Gameplay</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">Steven</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>AI</li>
+                                    <li>Gameplay</li>
                                 </ul>
                             </div>
                         </div>
@@ -176,10 +304,11 @@
                     <div class="panel-title">Visual</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-name">External resources</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>Meshes are from a licensed packs from Synty Store, https://syntystore.com/</li>
+                                    <li>Animations are from https://www.mixamo.com/</li>
                                 </ul>
                             </div>
                         </div>
@@ -189,10 +318,14 @@
                     <div class="panel-title">Audio</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-name">External resources</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>UI Selection: broumbroum, sf3-sfx-menu-back.wav, https://freesound.org/people/broumbroum/sounds/50557/?fbclid=IwAR1ONbntrj8aGbL2ipBH8di0K6IPJ9zQW3ON6kyjxEMapsRJkzTW6HI-D90</li>
+                                    <li>UI Validation: broumbroum, sf3-sfx-menu-validate.wav, https://freesound.org/people/broumbroum/sounds/50565/?fbclid=IwAR1x1-Tc-LZjz-FNw6tZitrUqwaJHDqYiiU1dN9a5FvV925iMtP2uCqLlAQ</li>
+                                    <li>Every other UI sounds were made by Ludwell using the Chiptone app: https://sfbgames.itch.io/chiptone</li>
+                                    <li>The ambiance soundtrack is from Micha, Puka A., Andrew Dodds, Krotos Starter Library</li>
+                                    <li>Other sounds are from Krotos Starter Library sound pack</li>
                                 </ul>
                             </div>
                         </div>

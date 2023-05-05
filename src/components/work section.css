@@ -41,7 +41,7 @@
 .notable-info .work-panel .panel-info .primary-visual{
     border-radius: 5px;
     box-shadow: -8px 8px 16px 0px rgba(0, 0, 0, 0.75);
-    width: 60%;
+    width: 40%;
     height: auto;
     object-fit: cover;
     align-self: center;
@@ -70,7 +70,7 @@
     padding: 16px 4px 16px 4px;
     margin-left: 8px;
     text-align: justify;
-    width: 40%;
+    width: 60%;
 }
 
 @media (max-width: 1195px){
