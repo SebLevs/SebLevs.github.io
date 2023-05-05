@@ -135,11 +135,11 @@ header nav .dropdown:hover .dropdown-content {
         width: 25%;
     }
     
-    header nav, header #name-and-title #job-title{
+    header #name-and-title #seb-name{
         font-size: 8px;
     }
 
-    header #name-and-title #seb-name{
+    header nav, header #name-and-title #job-title{
         font-size: 4px;
     }
 
