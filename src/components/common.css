@@ -48,3 +48,9 @@ body{
     transform: translateY(-1px);
     cursor: pointer;
 }
+
+@media (max-width: 1195px){
+    body{
+        font-size: 8px;
+    }
+}

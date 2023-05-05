@@ -27,13 +27,20 @@ header #name-and-title #job-title{
     font-size: 16px;
 }
 
-header .contact{
+header .contact-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .contact-section .contact{
     display: flex;
     user-select: none;
     padding-top: 8px;
 }
 
-header .contact a img{
+header .contact-section .contact a img{
     width: 32px;
     height: 32px;
     padding-left: 4px;
@@ -41,7 +48,7 @@ header .contact a img{
     transition: transform 0.22s ease-out;
 }
 
-header .contact a img:hover{
+header .contact-section .contact a img:hover{
     transform: translateY(5px);
 }
 
@@ -124,11 +131,11 @@ header nav .dropdown:hover .dropdown-content {
 
 @media (max-width: 1195px){
     header nav, header #name-and-title #job-title{
-        font-size: 12px;
+        font-size: 8px;
     }
 
     header #name-and-title #seb-name{
-        font-size: 16px;
+        font-size: 4px;
     }
 
     header .contact a img{
