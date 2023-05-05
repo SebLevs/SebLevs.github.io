@@ -8,7 +8,7 @@
 
 .notable-info .work-section .work-panel .credits .credit-panel{
     width: 45%;
-    min-height: 300px;
+    min-height: 128px;
     position: relative;
     z-index: -1;
     backdrop-filter: blur(5px);
@@ -18,6 +18,7 @@
     padding: 16px;
     margin: 8px;
     box-shadow: -8px 8px 16px 0px rgba(0, 0, 0, 0.75);
+    word-wrap: break-word;
 }
 
 .notable-info .work-section .work-panel .credits .credit-panel .employee-name{
