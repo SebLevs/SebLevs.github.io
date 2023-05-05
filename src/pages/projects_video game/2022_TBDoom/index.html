@@ -81,13 +81,14 @@
                 </div>
             </div>
             <div id="game-description" class="j">
-                TBDoom is a <span class="c b s">doomlike</span> with a pinch of <span class="c b s">Binding of Isaac</span> thrown in there.
-                <br/><br/>
-                For this project, I mainly worked on a base implementation of the <span class="c b s">three Cs</span>, 
-                the <span class="c b s">HUB</span>, the <span class="c b s">enemy AI</span>, and the enemy sprites.
+                <p>TBDoom is a <span class="c b s">doomlike</span> with a pinch of <span class="c b s">Binding of Isaac</span> thrown in there.</p>
+                <p>
+                    For this project, I mainly worked on a base implementation of the <span class="c b s">three Cs</span>,
+                    the <span class="c b s">HUB</span>, the <span class="c b s">enemy AI</span>, and the enemy sprites.
+                </p>
             </div>
         </section>
-        <section class="notable-info"> <!--index.css-->
+        <section class="notable-info"> <!--components/work section.css-->
             <div class="work-section">
                 <div class="work-type b s">PROGRAMMING</div>
                 <div class="work-panel">
@@ -97,19 +98,25 @@
                             <source src="./assets/videos/BT_00.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            My main goal with this project was to try and find a way to create a drag and drop type of finite state machine for the enemies.
-                            <br/><br/>
-                            Although it worked to the extent of which we needed it, the system failed in many ways. 
-                            One of which being its rigid design that did not allow for more than two different combat actions per enemies.
-                            <br/><br/>
-                            I later <span class="c b s">transitioned the Finite State Machine system into a handmade behaviour tree</span> which 
-                            <span class="c b s">used Unity's UIToolkit</span> for tree creation and management.
-                            <br/><br/>
-                            <u>Retrospective</u>
-                            <br/>
-                            Ultimately, with all that I've learned, <span class="c b s"> there are a lot of things that I would do differently
-                            now regarding the tool structure </span>, but this was a very instructive endeavour 
-                            regarding tool making and behaviour tree structuring.
+                            <p>
+                                My main goal with this project was to try and find a way to create a drag and drop type of
+                                finite state machine for the enemies.
+                            </p>
+                            <p>
+                                Although it worked to the extent of which we needed it, the system failed in many ways.
+                                One of which being its rigid design that did not allow for more than two different combat actions per enemies.
+                            </p>
+                            <p>
+                                I later <span class="c b s">transitioned the Finite State Machine system into a handmade behaviour tree</span> which
+                                <span class="c b s">used Unity's UIToolkit</span> for tree creation and management.
+                            </p>
+                            <p>
+                                <u>Retrospective</u>
+                                <br/>
+                                Ultimately, with all that I've learned, <span class="c b s"> there are a lot of things that I would do differently
+                                now regarding the tool structure </span>, but this was a very instructive endeavour
+                                regarding tool making and behaviour tree structuring.
+                            </p>
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -128,11 +135,15 @@
                             <source src="./assets/videos/token system_imp_00_edit text.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            A token system was implemented to l<span class="c b s">imit the number of enemies that are allowed to attack the player</span>.
-                            <br/><br/>
-                            An enemy <span class="c b s">without a token roam around until a token is free</span>o take.
-                            <br/><br/>
-                            This gives breathing space for the player, and it adds life to the background enemies, instead of having them idle around.
+                            <p>
+                                A token system was implemented to
+                                <span class="c b s">limit the number of enemies that are allowed to attack the player</span>.
+                            </p>
+                            <p>An enemy <span class="c b s">without a token roam around until a token is free</span>o take.</p>
+                            <p>
+                                This gives breathing space for the player, and it adds life to the background enemies,
+                                instead of having them idle around.
+                            </p>
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -145,15 +156,19 @@
                             <source src="./assets/videos/movement node system_00.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            <span class="c b s">Three node sections</span> are available <span class="c b s">around the player</span>: far, close, behind.
-                            <br/><br/>
-                            <span class="c b s">​A designer can set the desired ranged</span> of nodes that an enemy is to choose from when it decide 
-                            where to move next.
-                            <br/><br/>
-                            This gives the designer a <span class="c b s">control over where a type of enemy will try to be at any time</span> and, 
-                            in return, <span class="c b s">how clustered the player's vision can become</span> at all times.
-                            <br/><br/>
-                            This system was <span class="c b s">inspired by a similar design from God of War 2018</span>.
+                            <p>
+                                <span class="c b s">Three node sections</span> are available <span class="c b s">around the player</span>:
+                                far, close, behind.
+                            </p>
+                            <p>
+                                <span class="c b s">​A designer can set the desired ranged</span> of nodes that an enemy is to
+                                choose from when it decide where to move next.
+                            </p>
+                            <p>
+                                This gives the designer a <span class="c b s">control over where a type of enemy will try to be at any time</span>
+                                and,  in return, <span class="c b s">how clustered the player's vision can become</span> at all times.
+                            </p>
+                            <p>This system was <span class="c b s">inspired by a similar design from God of War 2018</span>.</p>
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -169,15 +184,19 @@
                             <source src="./assets/videos/Shooting range.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            A practice ring exists in the HUB for the player to <span class="c b s">try out weapons</span>.
-                            <br/><br/>
-                            Whenever the player <span class="c b s">quits the ring</span>, the 
-                            <span class="c b s">enemies change into punching bag type</span> of entities take their place.
-                            <br/><br/>
-                            The ring <span class="c b s">can be manually tweaked in size</span> by a designer.
-                            The <span class="c b s">enemy placement is randomized</span> based on the width and the height of the grid.
-                            <br/><br/>
-                            A bell <span class="c b s">can</span> be hit by the player to <span class="c b s">"re-roll" the enemy placement</span> on the ring.
+                            <p>A practice ring exists in the HUB for the player to <span class="c b s">try out weapons</span>.</p>
+                            <p>
+                                Whenever the player <span class="c b s">quits the ring</span>, the
+                                <span class="c b s">enemies change into punching bag type</span> of entities take their place.
+                            </p>
+                            <p>
+                                The ring <span class="c b s">can be manually tweaked in size</span> by a designer.
+                                The <span class="c b s">enemy placement is randomized</span> based on the width and the height of the grid.
+                            </p>
+                            <p>
+                                A bell <span class="c b s">can</span> be hit by the player to
+                                <span class="c b s">"re-roll" the enemy placement</span> on the ring.
+                            </p>
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -190,15 +209,19 @@
                             <source src="./assets/videos/HUB_pedestal.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            A pedestal <span class="c b s">containing multiple weapons and other items</span> can be placed in the game environment.
-                            <br/><br/>
-                            <span class="c b s"> The player can change the item shown</span> by interacting with arrow popups on both sides 
-                            of the pedestal.
-                            <br/><br/>
-                            The item <span class="c b s">will either be added to the player's inventory, or it will change the player's current weapon </span>
-                            if his or her inventory is full.
-                            <br/><br/>
-                            This allows the player to test out any aspect of the gameplay.
+                            <p>
+                                A pedestal <span class="c b s">containing multiple weapons and other items</span> can be
+                                placed in the game environment.
+                            </p>
+                            <p>
+                                <span class="c b s"> The player can change the item shown</span> by interacting with arrow popups on both sides
+                                of the pedestal.
+                            </p>
+                            <p>
+                                The item <span class="c b s">will either be added to the player's inventory, or it will
+                                change the player's current weapon </span> if his or her inventory is full.
+                            </p>
+                            <p>This allows the player to test out any aspect of the gameplay.</p>
                         </div>
                     </div>
                     <div class="bottom">
@@ -214,14 +237,17 @@
                             <source src="./assets/videos/combat_fire spitter_00.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            Both the token system and the AI preferential placement were created with the 
-                            <span class="c b s"> intention of adding a greater perceived intelligence </span> for the enemy AI.
-                            <br/><br/>
-                            <u>Retrospective</u>
-                            <br/>
-                            Although the <span class="c b s">AI behaviours remain very simplistic</span>, I think that, given my inexperience in 
-                            designing AI systems, <span class="c b s">I was successful in achieving a minimal acceptable dynamism </span> 
-                            regarding the fight flow.
+                            <p>
+                                Both the token system and the AI preferential placement were created with the
+                                <span class="c b s"> intention of adding a greater perceived intelligence </span> for the enemy AI.
+                            </p>
+                            <p>
+                                <u>Retrospective</u>
+                                <br/>
+                                Although the <span class="c b s">AI behaviours remain very simplistic</span>, I think that, given my inexperience in
+                                designing AI systems, <span class="c b s">I was successful in achieving a minimal acceptable dynamism </span>
+                                regarding the fight flow.
+                            </p>
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -240,13 +266,16 @@
                             <source src="./assets/videos/HUB_pedestal.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            It was decided that <span class="c b s">all interactions with the game world</span> would be in a 
-                            <span class="c b s">diegetic format</span>.
-                            <br/><br/>
-                            This design choice was made to <span class="c b s">push forward a more engaging gameplay loop</span>.
-                            <br/>
-                            It also <span class="c b s">helps in distracting</span> the player from the <span class="c b s">limited number of features</span> 
-                            of the game.
+                            <p>
+                                It was decided that <span class="c b s">all interactions with the game world</span> would be in a
+                                <span class="c b s">diegetic format</span>.
+                            </p>
+                            <p>
+                                This design choice was made to <span class="c b s">push forward a more engaging gameplay loop</span>.
+                                <br/>
+                                It also <span class="c b s">helps in distracting</span> the player from the <span class="c b s">limited number of features</span>
+                                of the game.
+                            </p>
                         </div>
                     </div>
                     <div class="bottom">
@@ -254,7 +283,7 @@
                 </div>
             </div>
             <div class="work-section">
-                <div class="work-type">CREDITS</div>
+                <div class="work-type">CREDITS</div> <!--components/credit section.css-->
                 <div class="work-panel"> <!--programming-->
                     <div class="panel-title">Programming</div>
                     <div class="credits">
@@ -289,7 +318,7 @@
                             <div class="employee-name">External resources</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Granberg. Aron, A* pathfinding project, https://arongranberg.com/astar/front</li>
+                                    <li><a href="https://arongranberg.com/astar/front" target="_blank" class="b s hoverable-link">Granberg. Aron, A* pathfinding project</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -309,7 +338,11 @@
                             </div>
                         </div>
                         <div class="credit-panel">
-                            <div class="employee-name">René Adam Riché (Foolbox)</div>
+                            <div class="employee-name">
+                                <a href="https://jellyfish-app-jlwqb.ondigitalocean.app/about.html" target="_blank" class="hoverable-link">
+                                    René Adam Riché (Foolbox)
+                                </a>
+                            </div>
                             <div class="employee-work">
                                 <ul>
                                     <li>UI</li>
@@ -332,7 +365,11 @@
                             </div>
                         </div>
                         <div class="credit-panel">
-                            <div class="employee-name">René Adam Riché (Foolbox)</div>
+                            <div class="employee-name">
+                                <a href="https://jellyfish-app-jlwqb.ondigitalocean.app/about.html" target="_blank" class="hoverable-link">
+                                    René Adam Riché (Foolbox)
+                                </a>
+                            </div>
                             <div class="employee-work">
                                 <ul>
                                     <li>Weapons</li>
@@ -346,7 +383,11 @@
                     <div class="panel-title">Audio</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">René Adam Riché (Foolbox)</div>
+                            <div class="employee-name">
+                                <a href="https://jellyfish-app-jlwqb.ondigitalocean.app/about.html" target="_blank" class="hoverable-link">
+                                    René Adam Riché (Foolbox)
+                                </a>
+                            </div>
                             <div class="employee-work">
                                 <ul>
                                     <li>Player's voice.</li>
@@ -357,7 +398,10 @@
                             <div class="employee-name">External resources</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Sounds and music are from https://elements.envato.com</li>
+                                    <li>
+                                        Sounds and music are from 
+                                        <a href="https://elements.envato.com" target="_blank" class="b s hoverable-link">Envato</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
