@@ -138,7 +138,7 @@ header nav .dropdown:hover .dropdown-content {
         font-size: 4px;
     }
 
-    header .contact a img{
+    header .contact-section .contact a img{
         width: 16px;
         height: 16px;
     }

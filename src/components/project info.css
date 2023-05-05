@@ -109,4 +109,9 @@
         width: 85%;
         min-height: 64px;
     }
+
+    #project-info #game-img-and-links #links-icon a img{
+        width: 16px;
+        height: 16px;
+    }
 }
