@@ -130,6 +130,11 @@ header nav .dropdown:hover .dropdown-content {
 }
 
 @media (max-width: 1195px){
+   
+    header #name-and-title{
+        width: 25%;
+    }
+    
     header nav, header #name-and-title #job-title{
         font-size: 8px;
     }
