@@ -81,15 +81,19 @@
                 </div>
             </div>
             <div id="game-description" class="j">
-                Hitman Poly is a first-person shooter where the <span class="c b s">player must eliminate a target and then extract from a city</span>.
-                <br/><br/>
-                My primary job on this project was the <span class="c b s">UI</span>, but I also worked on the 
-                <span class="c b s">object interaction system</span>, 
-                the <span class="c b s">scene management system</span>, and the <span class="c b s">audio system</span> as well as 
-                the <span class="c b s">entity hierarchy</span>.               
+                <p>
+                    Hitman Poly is a first-person shooter where the
+                    <span class="c b s">player must eliminate a target and then extract from a city</span>.
+                </p>
+                <p>
+                    My primary job on this project was the <span class="c b s">UI</span>, but I also worked on the
+                    <span class="c b s">object interaction system</span>,
+                    the <span class="c b s">scene management system</span>, and the <span class="c b s">audio system</span> as well as
+                    the <span class="c b s">entity hierarchy</span>.
+                </p>             
             </div>
         </section>
-        <section class="notable-info"> <!--index.css-->
+        <section class="notable-info"> <!--components/work section.css-->
             <div class="work-section">
                 <div class="work-type b s">PROGRAMMING</div>
                 <div class="work-panel">
@@ -99,20 +103,26 @@
                             <source src="./assets/videos/ui_main menu into play session.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            The UI system produced for this project uses a simple <span class="c b s">layered hierarchy</span> where a 
-                            <span class="c b s">singleton UIManager</span> contains <span class="c b s">UIViews</span> (any specific UI "screen"). 
-                            The UIViews are game objects, and they can have as many <span class="c b s">UIElements</span> (button, selectables, etc) as needed.
-                            <br/><br/>
-                            A <span class="c b s">system of show/hide exists on every UIView</span>. 
-                            The base implementation implies a fade-in and fade-out respectively, 
-                            but a custom implementation <span class="c b s">can be extended easily on any UIView concretion</span>.
-                            <br/><br/>
-                            <span class="c b s">UIElements</span> can have their own concretion where needed for <span class="c b s"> 
-                            custom behaviours such as a filling bar, a number counter, a text printer, etc</span>.
-                            <br/><br/>
-                            A system of 
-                            <span class="c b s"> Action (C#) is used as a callback system to chain up views </span> 
-                            <span class="c b s">behaviours and/or transitions</span> as needed when a show or a hide is completed.
+                            <p>
+                                The UI system produced for this project uses a simple <span class="c b s">layered hierarchy</span> where a
+                                <span class="c b s">singleton UIManager</span> contains <span class="c b s">UIViews</span>
+                                (any specific UI "screen"). The UIViews are game objects, and they can have as many
+                                <span class="c b s">UIElements</span> (button, selectables, etc) as needed.
+                            </p>
+                            <p>
+                                A <span class="c b s">system of show/hide exists on every UIView</span>.
+                                The base implementation implies a fade-in and fade-out respectively,
+                                but a custom implementation <span class="c b s">can be extended easily on any UIView concretion</span>.
+                            </p>
+                            <p>
+                                <span class="c b s">UIElements</span> can have their own concretion where needed for <span class="c b s">
+                                custom behaviours such as a filling bar, a number counter, a text printer, etc</span>.
+                            </p>
+                            <p>
+                                A system of
+                                <span class="c b s"> Action (C#) is used as a callback system to chain up views </span>
+                                <span class="c b s">behaviours and/or transitions</span> as needed when a show or a hide is completed.
+                            </p>
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -131,12 +141,14 @@
                             <source src="./assets/videos/pickable_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            A system was implemented to <span class="c b s">allow any entity to pickup, drop or use</span> an object.
-                            <br/><br/>
-                            A <span class="c b s">simple hierarchy</span> is used where a base class "Pickable" has children such as "Throwable" and "Weapon". 
-                            Behaviour such as <span class="c b s">OnPickup, OnDrop and OnAttack are used to dictate what happens based on the concretion</span> at hand.
-                            <br/><br/>
-                            A throwable would fly away OnAttack whereas a ranged weapon would fire a bullet for example.
+                            <p>A system was implemented to <span class="c b s">allow any entity to pickup, drop or use</span> an object.</p>
+                            <p>
+                                A <span class="c b s">simple hierarchy</span> is used where a base class "Pickable" has children such as
+                                "Throwable" and "Weapon". Behaviour such as
+                                <span class="c b s">OnPickup, OnDrop and OnAttack are used to dictate what happens based on the concretion</span>
+                                at hand.
+                            </p>
+                            <p>A throwable would fly away OnAttack whereas a ranged weapon would fire a bullet for example.</p>
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -152,17 +164,20 @@
                             <source src="./assets/videos/scene load and unload_Unity.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            Scenes both <span class="c b s">load and unload in an asynchronous manner</span> when required.
-                            <br/><br/>
-                            A <span class="c b s">multiple scene hierarchy</span> is used in Unity to 
-                            <span class="c b s"> avoid reloading managers and other singleton objects </span> 
-                            that should always exists in the game environment.
-                            <br/>
-                            A <span class="c b s">base scene</span> contains every persistent manager and singleton.
-                            <br/>
-                            The <span class="c b s">other scenes</span> can be <span class="c b s">loaded when required</span>.
-                            <br/><br/>
-                            This allows for <span class="c b s">decoupling every scene from any system it doesn't use or that it doesn't require</span>.
+                            <p>Scenes both <span class="c b s">load and unload in an asynchronous manner</span> when required.</p>
+                            <p>
+                                A <span class="c b s">multiple scene hierarchy</span> is used in Unity to
+                                <span class="c b s"> avoid reloading managers and other singleton objects </span>
+                                that should always exists in the game environment.
+                                <br/>
+                                A <span class="c b s">base scene</span> contains every persistent manager and singleton.
+                                <br/>
+                                The <span class="c b s">other scenes</span> can be <span class="c b s">loaded when required</span>.
+                            </p>
+                            <p>
+                                This allows for <span class="c b s">decoupling every scene from any system it doesn't use
+                                or that it doesn't require</span>.
+                            </p>
                         </div>
                     </div>
                     <div class="bottom">
@@ -175,18 +190,21 @@
                             <source src="./assets/videos/combat_gun_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            A simple <span class="c b s">double layered system</span> was used for this project.
-                            <br/><br/>
-                            An <span class="c b s">AudioController</span> concretion containing <span class="c b s">AudioElements</span> is 
-                            used to call either a <span class="c b s">random sound or a specific sound</span> from any given AudioElement.
-                            <br/><br/>
-                            An <span class="c b s">audio source</span> can be set <span class="c b s">for every AudioController</span> to allow 
-                            for a <span class="c b s">better 3D layering</span> of the sound if need be.
-                            <br/><br/>
-                            <u>Retrospective</u>
-                            <br/>
-                            This system <span class="c b s">still needs a lot of work</span> to make it as modular as it should, 
-                            but it <span class="c b s">does what it has to do</span>.
+                            <p>A simple <span class="c b s">double layered system</span> was used for this project.</p>
+                            <p>
+                                An <span class="c b s">AudioController</span> concretion containing <span class="c b s">AudioElements</span> is
+                                used to call either a <span class="c b s">random sound or a specific sound</span> from any given AudioElement.
+                            </p>
+                            <p>
+                                An <span class="c b s">audio source</span> can be set <span class="c b s">for every AudioController</span> to allow
+                                for a <span class="c b s">better 3D layering</span> of the sound if need be.
+                            </p>
+                            <p>
+                                <u>Retrospective</u>
+                                <br/>
+                                This system <span class="c b s">still needs a lot of work</span> to make it as modular as it should,
+                                but it <span class="c b s">does what it has to do</span>.
+                            </p>
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -205,16 +223,20 @@
                             <source src="./assets/videos/tutorial.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            A text-based tutorial was implemented to <span class="c b s">facilitate the learning of mechanics and goals</span> of 
-                            the game.
-                            <br/><br/>
-                            The player <span class="c b s">can skip the tutorial</span> by pressing the 
-                            <span class="c b s">key that would usually close the screen</span> 
-                            he or she is viewing at that time.
-                            <br/><br/>
-                            Although <span class="c b s">retention is far less prominent</span> with such a boring teaching process, 
-                            our <span class="c b s">lack of time</span> to produce a good learning experience 
-                            <span class="c b s">made this over nothing a viable solution</span>.
+                            <p>
+                                A text-based tutorial was implemented to <span class="c b s">facilitate the learning of mechanics and goals</span>
+                                of the game.
+                            </p>
+                            <p>
+                                The player <span class="c b s">can skip the tutorial</span> by pressing the
+                                <span class="c b s">key that would usually close the screen</span>
+                                he or she is viewing at that time.
+                            </p>
+                            <p>
+                                Although <span class="c b s">retention is far less prominent</span> with such a boring teaching process,
+                                our <span class="c b s">lack of time</span> to produce a good learning experience
+                                <span class="c b s">made this over nothing a viable solution</span>.
+                            </p>
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -222,7 +244,7 @@
                 </div>
             </div>
             <div class="work-section">
-                <div class="work-type">CREDITS</div>
+                <div class="work-type">CREDITS</div> <!--components/credit section.css-->
                 <div class="work-panel"> <!--programming-->
                     <div class="panel-title">Programming</div>
                     <div class="credits">
@@ -240,7 +262,9 @@
                             </div>
                         </div>
                         <div class="credit-panel">
-                            <div class="employee-name">Marc-Antoine Giguère (Power Key)</div>
+                            <div class="employee-name">
+                                <a href="https://www.marcantoinegiguere.ca/" target="_blank" class="hoverable-link">Marc-Antoine Giguère (Power Key)</a>
+                            </div>
                             <div class="employee-work">
                                 <ul>
                                     <li>Three Cs</li>
@@ -273,7 +297,9 @@
                             </div>
                         </div>
                         <div class="credit-panel">
-                            <div class="employee-name">Marc-Antoine Giguère (Power Key)</div>
+                            <div class="employee-name">
+                                <a href="https://www.marcantoinegiguere.ca/" target="_blank" class="hoverable-link">Marc-Antoine Giguère (Power Key)</a>
+                            </div>
                             <div class="employee-work">
                                 <ul>
                                     <li>Gameplay</li>
@@ -298,8 +324,12 @@
                             <div class="employee-name">External resources</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Meshes are from a licensed packs from Synty Store, https://syntystore.com/</li>
-                                    <li>Animations are from https://www.mixamo.com/</li>
+                                    <li>Meshes: licensed packs from 
+                                        <a href="https://syntystore.com/" target="_blank" class="b s hoverable-link">Synty Store</a>
+                                    </li>
+                                    <li>Animations: 
+                                        <a href="https://www.mixamo.com/" target="_blank" class="b s hoverable-link">Mixamo</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -312,11 +342,29 @@
                             <div class="employee-name">External resources</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>UI Selection: broumbroum, sf3-sfx-menu-back.wav, https://freesound.org/people/broumbroum/sounds/50557/?fbclid=IwAR1ONbntrj8aGbL2ipBH8di0K6IPJ9zQW3ON6kyjxEMapsRJkzTW6HI-D90</li>
-                                    <li>UI Validation: broumbroum, sf3-sfx-menu-validate.wav, https://freesound.org/people/broumbroum/sounds/50565/?fbclid=IwAR1x1-Tc-LZjz-FNw6tZitrUqwaJHDqYiiU1dN9a5FvV925iMtP2uCqLlAQ</li>
-                                    <li>Every other UI sounds were made by Ludwell using the Chiptone app: https://sfbgames.itch.io/chiptone</li>
-                                    <li>The ambiance soundtrack is from Micha, Puka A., Andrew Dodds, Krotos Starter Library</li>
-                                    <li>Other sounds are from Krotos Starter Library sound pack</li>
+                                    <li>UI Selection: 
+                                        <a href="https://freesound.org/people/broumbroum/sounds/50557/?fbclid=IwAR1ONbntrj8aGbL2ipBH8di0K6IPJ9zQW3ON6kyjxEMapsRJkzTW6HI-D90" target="_blank" class="b s hoverable-link">
+                                       broumbroum, sf3-sfx-menu-back.wav
+                                        </a>
+                                    </li>
+                                    <li>UI Validation: 
+                                        <a href=" https://freesound.org/people/broumbroum/sounds/50565/?fbclid=IwAR1x1-Tc-LZjz-FNw6tZitrUqwaJHDqYiiU1dN9a5FvV925iMtP2uCqLlAQ" class="b s hoverable-link">
+                                            broumbroum, sf3-sfx-menu-validate.wav
+                                        </a>
+                                    </li>
+                                    <li>Every other UI sounds were made by Ludwell using the 
+                                        <a href="https://sfbgames.itch.io/chiptone" target="_blank" class="b s hoverable-link">Chiptone</a> 
+                                        app.
+                                    </li>
+                                    <li>
+                                        Ambiance soundtrack: Micha, Puka A., Andrew Dodds, 
+                                        <a href="https://www.krotosaudio.com/" target="_blank" class="b s hoverable-link">Krotos</a> 
+                                        Starter Library</li>
+                                    <li>
+                                        Other sounds are from 
+                                        <a href="https://www.krotosaudio.com/" target="_blank" class="b s hoverable-link">Krotos</a> 
+                                        Starter Library sound pack
+                                    </li>
                                 </ul>
                             </div>
                         </div>
