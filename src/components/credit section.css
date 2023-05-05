@@ -1,0 +1,31 @@
+.notable-info .work-section .work-panel .credits{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.notable-info .work-section .work-panel .credits .credit-panel{
+    width: 45%;
+    min-height: 300px;
+    position: relative;
+    z-index: -1;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    margin: 8px;
+    box-shadow: -8px 8px 16px 0px rgba(0, 0, 0, 0.75);
+}
+
+.notable-info .work-section .work-panel .credits .credit-panel .employee-name{
+    font-size: 20px;
+}
+
+@media (max-width: 1195px){
+    .notable-info .work-section .work-panel .credits .credit-panel{
+        width: 95%;
+    }
+}

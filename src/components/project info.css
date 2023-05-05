@@ -1,0 +1,105 @@
+#project-info{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 128px;
+    width: 100%;
+}
+
+#project-info #game-title{
+    font-size: 64px;
+    padding-bottom: 16px;
+}
+
+#project-info #info-container{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: space-around;
+    padding-bottom: 16px;
+}
+
+#project-info #info-container .info{
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.22s ease-out;
+    user-select: none;
+}
+
+#project-info #info-container .info img{
+    width: 32px;
+    height: 32px;
+}
+
+#project-info #info-container .info:hover{
+    transform: scale(1.15);
+}
+
+#project-info #game-img-and-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-info #game-img-and-links #game-banner{
+    width: 600px;
+    max-width: 75%;
+    height: 250px;
+    margin: 16px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.75);
+}
+
+#project-info #game-img-and-links #links-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+#project-info #game-img-and-links #links-icon a img{
+    width: 32px;
+    height: 32px;
+    padding-bottom: 8px;
+    transition: transform 0.22s ease-out;
+}
+
+#project-info #game-img-and-links #links-icon a img:hover{
+    transform: translateX(5px);
+}
+
+#project-info #game-description{
+    width: 75%;
+    min-height: 150px;
+    position: relative;
+    z-index: -1;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 1195px){
+    #project-info{
+        padding-top: 64px;
+    }
+    
+    #project-info #info-container .info img{
+        width: 16px;
+        height: 16px;
+    }
+    
+    #project-info #info-container .info{
+        height: 32px;
+    }
+}

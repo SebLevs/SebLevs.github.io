@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../components/common.css">
+        <link rel="stylesheet" href="../../../components/project info.css">
+        <link rel="stylesheet" href="../../../components/work section.css">
+        <link rel="stylesheet" href="../../../components/credit section.css">
+        <link rel="stylesheet" href="../../../components/pages/header/index.css">
+        <link rel="stylesheet" href="../../../components/pages/footer/index.css">
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="width-device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width">
+        <title>Sébastien Lévesque | Simple Space Invader</title>
+        <link rel="icon" href="../../../components/assets/icons/icon_tab.png">
+    </head>
+    <body> <!--components/common.css-->
+        <header> <!--components/pages/header/index.css-->
+            <div id="name-and-title">
+                <p id="seb-name">Sébastien Lévesque</p>
+                <p id="job-title">Programmer</p>
+            </div>
+            <div class="contact">
+                <a href="https://github.com/SebLevs" target="blank"><img src="../../../components/assets/icons/icon_Github.svg"></a>
+                <a href="https://ludwellstudio.itch.io/" target="blank"><img src="../../../components/assets/icons/Icon_Itch.png"></a>
+                <a href="https://www.linkedin.com/in/sebastienlevesqueslev/" target="blank"><img src="../../../components/assets/icons/icon_LinkedIn.svg"></a>
+                <a href="mailto:sebastien.levesque.slev@gmail.com"><img src="../../../components/assets/icons/icon_email.svg"></a>
+            </div>
+            <nav>
+                <a href="../../about/index.html" target="_self" id="page-link">About me</a>
+                <div class="dropdown">
+                    <span>Video game projects</span>
+                    <div class="dropdown-content">
+                        <div class="year-notation">2023</div>
+                        <a href="../2023_Zombie Survivor/index.html" class="dropdown-game">Zombie Survivor</a>
+
+                        <div class="year-notation">2022</div>
+                        <a href="../2022_Hitman Poly/index.html" class="dropdown-game">Hitman Poly</a>
+                        <a href="../2022_TBDoom/index.html" class="dropdown-game">TBDoom</a>
+
+                        <div class="year-notation">2021</div>
+                        <a href="../2021_Druidal Communion/index.html" class="dropdown-game">Druidal Communion</a>
+                        <a href="../2021_Mischievous Fluffball/index.html" class="dropdown-game">Mischievous Fluffball</a>
+
+                        <div class="year-notation ">2020</div>
+                        <a href="../2020_Space Invaders/index.html" class="dropdown-game">Space Invaders</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="project-info"> <!--components/project info.css-->
+            <div id="game-img-and-links">
+                <img id="game-banner" src="./assets/images/title banner.png">
+                <div id="links-icon">
+                    <a href="https://github.com/SebLevs/Simple-Space-Invader" target="blank"><img src="../../../components/assets/icons/icon_Github.svg"></a>
+                    <a href="https://ludwellstudio.itch.io/simple-space-invader" target="blank"><img src="../../../components/assets/icons/Icon_Itch.png"></a>
+                </div>
+            </div>
+            <div id="info-container">
+                <div class="info"> <!--Engine-->
+                    <img src="../../../components/assets/icons/icon_Unity.png">
+                    <div>Unity</div>
+                </div>
+                <div class="info"> <!--Production date-->
+                    <img src="../../../components/assets/icons/icon_calendar.svg">
+                    <div>Winter 2020</div>
+                </div>
+                <div class="info"> <!--Production duration-->
+                    <img src="../../../components/assets/icons/icon_clock.svg">
+                    <div>4 weeks</div>
+                </div>
+                <div class="info"> <!--Project Genre-->
+                    <img src="../../../components/assets/icons/icon_tag.svg">
+                    <div>Action | Arcade</div>
+                </div>
+                <div class="info"> <!--Team size-->
+                    <img src="../../../components/assets/icons/icon_user.svg">
+                    <div>1</div>
+                </div>
+            </div>
+            <div id="game-description" class="j">
+                This project was made within an arcade game cloning club a few colleagues and I started at the <span class="b s c">beginning of our DEC at LaSalle college</span>.
+                <br/><br/>
+                The main goal of this project was to <span class="b s c">familiarize myself with the Unity engine</span> while trying to <span class="b s c">replicate as closely as possible the logic of the Space Invaders</span> game.
+            </div>
+        </section>
+        <section class="notable-info"> <!--index.css-->
+            <div class="work-section">
+                <div class="work-type b s">PROGRAMMING</div>
+                <div class="work-panel"> <!--ACSII and destructible buildings-->
+                    <div class="panel-title">ASCII and destructible <span class="c b s">buildings</span></div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            Each <span class="c b s">building is made out of 1x1 pixel blocs</span>. 
+                            Each bloc is instantiated <span class="c b s">from a two-dimensional array of characters</span> (ASCII). 
+                            It surprises me to this day that I actually went through with this tedious task.
+                            <br/><br/>
+                            <span class="c b s">Every bloc</span> of a building <span class="c b s">can be destroyed</span>.
+                            <br/>
+                            When a <span class="c b s">projectile hits a bloc</span>, a couple of the bloc's 
+                            <span class="c b s">nearest blocs are also destroyed</span>.
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <img class="secondary-visual" src="./assets/images/title banner.png">
+                    </div>
+                </div>
+            </div>
+            <div class="work-section">
+                <div class="work-type">DESIGN</div>
+                <div class="work-panel"> <!--ACSII and destructible buildings-->
+                    <div class="panel-title">ASCII and destructible <span class="c b s">buildings</span></div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            Each building is made out of 1x1 pixel blocs. Each bloc is instantiated from a two-dimensional array of characters (ASCII). It surprises me to this day that I actually went through with this tedious task.
+                            <br/><br/>
+                            Every bloc of a building can be destroyed.
+                            <br/>
+                            When a projectile hits a bloc, a couple of the bloc's nearest blocs are also destroyed.
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <img class="secondary-visual" src="./assets/images/title banner.png">
+                    </div>
+                </div>
+            </div>
+            <div class="work-section">
+                <div class="work-type">CREDITS</div>
+                <div class="work-panel"> <!--programming-->
+                    <div class="panel-title">Programming</div>
+                    <div class="credits">
+                        <div class="credit-panel">
+                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-panel"> <!--design-->
+                    <div class="panel-title">Design</div>
+                    <div class="credits">
+                        <div class="credit-panel">
+                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-panel"> <!--visual-->
+                    <div class="panel-title">Visual</div>
+                    <div class="credits">
+                        <div class="credit-panel">
+                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-panel"> <!--audio-->
+                    <div class="panel-title">Audio</div>
+                    <div class="credits">
+                        <div class="credit-panel">
+                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer> <!--components/pages/footer/index.css-->
+            <div> &copy; Sébastien Lévesque | All rights reserved </div>
+        </footer>
+    </body>
+</html>
