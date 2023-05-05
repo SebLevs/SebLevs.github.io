@@ -53,8 +53,8 @@
             <div id="game-img-and-links">
                 <img id="game-banner" src="./assets/images/title banner.png">
                 <div id="links-icon">
-                    <a href="https://github.com/SebLevs/Simple-Space-Invader" target="blank"><img src="../../../components/assets/icons/icon_Github.svg"></a>
-                    <a href="https://ludwellstudio.itch.io/simple-space-invader" target="blank"><img src="../../../components/assets/icons/Icon_Itch.png"></a>
+                    <a href="https://github.com/SebLevs/Druidal-Communion" target="blank"><img src="../../../components/assets/icons/icon_Github.svg"></a>
+                    <a href="https://ludwellstudio.itch.io/druidal-communion" target="blank"><img src="../../../components/assets/icons/Icon_Itch.png"></a>
                 </div>
             </div>
             <div id="info-container">
@@ -64,15 +64,15 @@
                 </div>
                 <div class="info"> <!--Production date-->
                     <img src="../../../components/assets/icons/icon_calendar.svg">
-                    <div>Winter 2020</div>
+                    <div>Autumn 2021</div>
                 </div>
                 <div class="info"> <!--Production duration-->
                     <img src="../../../components/assets/icons/icon_clock.svg">
-                    <div>4 weeks</div>
+                    <div>1 month</div>
                 </div>
                 <div class="info"> <!--Project Genre-->
                     <img src="../../../components/assets/icons/icon_tag.svg">
-                    <div>Action | Arcade</div>
+                    <div>2D | Action</div>
                 </div>
                 <div class="info"> <!--Team size-->
                     <img src="../../../components/assets/icons/icon_user.svg">
@@ -80,51 +80,92 @@
                 </div>
             </div>
             <div id="game-description" class="j">
-                This project was made within an arcade game cloning club a few colleagues and I started at the <span class="b s c">beginning of our DEC at LaSalle college</span>.
+                The main goal behind this project was to create a <span class="c b s">simple AI system for the enemies</span>.
+                <br/>
+                Most goals sourced back to the idea of <span class="c b s">enhancing the fight against the enemies</span>: feedback (audio and visual), hiding enemies in the flora and player skills.
             </div>
         </section>
         <section class="notable-info"> <!--index.css-->
             <div class="work-section">
                 <div class="work-type b s">PROGRAMMING</div>
-                <div class="work-panel"> <!--ACSII and destructible buildings-->
-                    <div class="panel-title">ASCII and destructible <span class="c b s">buildings</span></div>
+                <div class="work-panel">
+                    <div class="panel-title">A <span class="c b s">Finite State Machine</span> to control the <span class="c b s">enemies</span></div>
                     <div class="panel-info">
                         <video class="primary-visual" controls autoplay muted loop>
-                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                            <source src="./assets/videos/fight_cyclop_00.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
+                            <span class="c b s">Both enemies have their own</span> context and a <span class="c b s">handful of states</span> each that they can go from and out of.
+                            <br/><br/>
+                            Both enemies have their own combat behaviours to maximize gameplay variety.
+                            <br/><br/>
+                            The warlock (flower) can teleport other enemies or itself near the player to create a threat hierarchy between the two enemies.
                         </div>
                     </div>
                     <div class="bottom"> 
                         <video class="secondary-visual" controls autoplay muted loop>
-                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                            <source src="./assets/videos/fight_warlock_00.mp4" type="video/mp4">
                         </video>
-                        <video class="secondary-visual" controls autoplay muted loop>
-                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title"><span class="c b s">Player skills</span></div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/skill_ALL.mp4" type="video/mp4">
                         </video>
-                        <img class="secondary-visual" src="./assets/images/title banner.png">
+                        <div class="panel-description j">
+                            <span class="c b s">Skills are detached from the player entity</span>. They are thus autonomous in their behaviours.
+                            Every skill has its own associated object from which it is possible to set variables such as damage, 
+                            type of instantiation into the game environment and others.
+                            <br/><br/>
+                            <u>Retrospective</u>
+                            <br/>
+                            This system, although viable in its execution scope, has its own bucket of flaws. 
+                            In retrospect, simply <span class="c b s">using a strategy or a command pattern would have been a much better solution</span> 
+                            to set up and use every aspect of the player's skills.
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <img class="secondary-visual" src="./assets/images/Skill_00.png">
+                        <img class="secondary-visual" src="./assets/images/strategy_00.png">
                     </div>
                 </div>
             </div>
             <div class="work-section">
                 <div class="work-type">DESIGN</div>
-                <div class="work-panel"> <!--ACSII and destructible buildings-->
-                    <div class="panel-title">ASCII and destructible <span class="c b s">buildings</span></div>
+                <div class="work-panel">
+                    <div class="panel-title">A bit of <span class="c b s">story telling</span> to <span class="c b s">guide and teach</span> the player</div>
                     <div class="panel-info">
                         <video class="primary-visual" controls autoplay muted loop>
-                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                            <source src="./assets/videos/introduction.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
+                            Every time the game starts, a skippable <span class="c b s">introduction is shown to the player</span>.
+                            <br/><br/>
+                            This introduction <span class="c b s">serves two purposes</span>:
+                            <ul>
+                                <li>Guiding the player's actions</li>
+                                <li>Teaching the player what are and where are the important parts of the map.</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="bottom"> 
-                        <video class="secondary-visual" controls autoplay muted loop>
-                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title">Designing <span class="c b s">AI feedback</span> with a focus on <span class="c b s">animation anticipation</span></div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/fight_both_01.mp4" type="video/mp4">
                         </video>
-                        <video class="secondary-visual" controls autoplay muted loop>
-                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
-                        </video>
-                        <img class="secondary-visual" src="./assets/images/title banner.png">
+                        <div class="panel-description j">
+                            Animation was used to <span class="c b s">display any AI entity's motive and action</span>.
+                            <br/><br/>
+                            ​This ensures a combat flow where <span class="c b s">AI behaviour is more predictable and less chaotic</span> for the player.
+                        </div>
+                    </div>
+                    <div class="bottom"> 
                     </div>
                 </div>
             </div>
