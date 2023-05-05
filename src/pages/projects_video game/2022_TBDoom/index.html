@@ -53,8 +53,8 @@
             <div id="game-img-and-links">
                 <img id="game-banner" src="./assets/images/title banner.png">
                 <div id="links-icon">
-                    <a href="https://github.com/SebLevs/Simple-Space-Invader" target="blank"><img src="../../../components/assets/icons/icon_Github.svg"></a>
-                    <a href="https://ludwellstudio.itch.io/simple-space-invader" target="blank"><img src="../../../components/assets/icons/Icon_Itch.png"></a>
+                    <a href="https://github.com/SebLevs/TBDoom_Final" target="blank"><img src="../../../components/assets/icons/icon_Github.svg"></a>
+                    <a href="https://foolboxstudio.itch.io/tbdoom" target="blank"><img src="../../../components/assets/icons/Icon_Itch.png"></a>
                 </div>
             </div>
             <div id="info-container">
@@ -64,15 +64,15 @@
                 </div>
                 <div class="info"> <!--Production date-->
                     <img src="../../../components/assets/icons/icon_calendar.svg">
-                    <div>Winter 2020</div>
+                    <div>Winter 2021</div>
                 </div>
                 <div class="info"> <!--Production duration-->
                     <img src="../../../components/assets/icons/icon_clock.svg">
-                    <div>4 weeks</div>
+                    <div>4 months</div>
                 </div>
                 <div class="info"> <!--Project Genre-->
                     <img src="../../../components/assets/icons/icon_tag.svg">
-                    <div>Action | Arcade</div>
+                    <div>2.5D | FPS | Roguelike | Boomer Shooter</div>
                 </div>
                 <div class="info"> <!--Team size-->
                     <img src="../../../components/assets/icons/icon_user.svg">
@@ -80,29 +80,147 @@
                 </div>
             </div>
             <div id="game-description" class="j">
-                This project was made within an arcade game cloning club a few colleagues and I started at the <span class="b s c">beginning of our DEC at LaSalle college</span>.
+                TBDoom is a <span class="c b s">doomlike</span> with a pinch of <span class="c b s">Binding of Isaac</span> thrown in there.
                 <br/><br/>
-                The main goal of this project was to <span class="b s c">familiarize myself with the Unity engine</span> while trying to <span class="b s c">replicate as closely as possible the logic of the Space Invaders</span> game.
+                For this project, I mainly worked on a base implementation of the <span class="c b s">three Cs</span>, 
+                the <span class="c b s">HUB</span>, the <span class="c b s">enemy AI</span>, and the enemy sprites.
             </div>
         </section>
         <section class="notable-info"> <!--index.css-->
             <div class="work-section">
                 <div class="work-type b s">PROGRAMMING</div>
-                <div class="work-panel"> <!--ACSII and destructible buildings-->
-                    <div class="panel-title">ASCII and destructible <span class="c b s">buildings</span></div>
+                <div class="work-panel">
+                    <div class="panel-title">A <span class="c b s">handmade behaviour tree</span> for the enemy AI</div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/BT_00.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            My main goal with this project was to try and find a way to create a drag and drop type of finite state machine for the enemies.
+                            <br/><br/>
+                            Although it worked to the extent of which we needed it, the system failed in many ways. 
+                            One of which being its rigid design that did not allow for more than two different combat actions per enemies.
+                            <br/><br/>
+                            I later <span class="c b s">transitioned the Finite State Machine system into a handmade behaviour tree</span> which 
+                            <span class="c b s">used Unity's UIToolkit</span> for tree creation and management.
+                            <br/><br/>
+                            <u>Retrospective</u>
+                            <br/>
+                            Ultimately, with all that I've learned, <span class="c b s"> there are a lot of things that I would do differently
+                            now regarding the tool structure </span>, but this was a very instructive endeavour 
+                            regarding tool making and behaviour tree structuring.
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/BT_01_imp_In game behaviour.mp4" type="video/mp4">
+                        </video>
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/BT_01_imp.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title">An <span class="c b s">AI token system</span> to prevent overwhelming the player</div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/token system_imp_00_edit text.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            A token system was implemented to l<span class="c b s">imit the number of enemies that are allowed to attack the player</span>.
+                            <br/><br/>
+                            An enemy <span class="c b s">without a token roam around until a token is free</span>o take.
+                            <br/><br/>
+                            This gives breathing space for the player, and it adds life to the background enemies, instead of having them idle around.
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title">An <span class="c b s">AI preferential placement</span> system</div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/movement node system_00.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            <span class="c b s">Three node sections</span> are available <span class="c b s">around the player</span>: far, close, behind.
+                            <br/><br/>
+                            <span class="c b s">​A designer can set the desired ranged</span> of nodes that an enemy is to choose from when it decide 
+                            where to move next.
+                            <br/><br/>
+                            This gives the designer a <span class="c b s">control over where a type of enemy will try to be at any time</span> and, 
+                            in return, <span class="c b s">how clustered the player's vision can become</span> at all times.
+                            <br/><br/>
+                            This system was <span class="c b s">inspired by a similar design from God of War 2018</span>.
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/movement node system_imp fleeing.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title">A <span class="c b s">practice ring</span> for the player</div>
                     <div class="panel-info">
                         <video class="primary-visual" controls autoplay muted loop>
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            Each <span class="c b s">building is made out of 1x1 pixel blocs</span>. 
-                            Each bloc is instantiated <span class="c b s">from a two-dimensional array of characters</span> (ASCII). 
-                            It surprises me to this day that I actually went through with this tedious task.
+                            A practice ring exists in the HUB for the player to <span class="c b s">try out weapons</span>.
                             <br/><br/>
-                            <span class="c b s">Every bloc</span> of a building <span class="c b s">can be destroyed</span>.
+                            Whenever the player <span class="c b s">quits the ring</span>, the 
+                            <span class="c b s">enemies change into punching bag type</span> of entities take their place.
+                            <br/><br/>
+                            The ring <span class="c b s">can be manually tweaked in size</span> by a designer.
+                            The <span class="c b s">enemy placement is randomized</span> based on the width and the height of the grid.
+                            <br/><br/>
+                            A bell <span class="c b s">can</span> be hit by the player to <span class="c b s">"re-roll" the enemy placement</span> on the ring.
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title">A <span class="c b s">diegetic weapon pedestal</span> for the hub</div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/HUB_pedestal.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            A pedestal <span class="c b s">containing multiple weapons and other items</span> can be placed in the game environment.
+                            <br/><br/>
+                            <span class="c b s"> The player can change the item shown</span> by interacting with arrow popups on both sides 
+                            of the pedestal.
+                            <br/><br/>
+                            The item <span class="c b s">will either be added to the player's inventory, or it will change the player's current weapon </span>
+                            if his or her inventory is full.
+                            <br/><br/>
+                            This allows the player to test out any aspect of the gameplay.
+                        </div>
+                    </div>
+                    <div class="bottom">
+                    </div>
+                </div>
+            </div>
+            <div class="work-section">
+                <div class="work-type">DESIGN</div>
+                <div class="work-panel"> 
+                    <div class="panel-title">An <span class="c b s">AI design</span> that aims for a <span class="c b s">greater perceived behaviour complexity</span></div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            Both the token system and the AI preferential placement were created with the 
+                            <span class="c b s"> intention of adding a greater perceived intelligence </span> for the enemy AI.
+                            <br/><br/>
+                            <u>Retrospective</u>
                             <br/>
-                            When a <span class="c b s">projectile hits a bloc</span>, a couple of the bloc's 
-                            <span class="c b s">nearest blocs are also destroyed</span>.
+                            Although the <span class="c b s">AI behaviours remain very simplistic</span>, I think that, given my inexperience in 
+                            designing AI systems, <span class="c b s">I was successful in achieving a minimal acceptable dynamism </span> 
+                            regarding the fight flow.
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -115,21 +233,20 @@
                         <img class="secondary-visual" src="./assets/images/title banner.png">
                     </div>
                 </div>
-            </div>
-            <div class="work-section">
-                <div class="work-type">DESIGN</div>
-                <div class="work-panel"> <!--ACSII and destructible buildings-->
-                    <div class="panel-title">ASCII and destructible <span class="c b s">buildings</span></div>
+                <div class="work-panel"> 
+                    <div class="panel-title">A <span class="c b s">diegetic interaction</span> oriented gameplay</div>
                     <div class="panel-info">
                         <video class="primary-visual" controls autoplay muted loop>
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            Each building is made out of 1x1 pixel blocs. Each bloc is instantiated from a two-dimensional array of characters (ASCII). It surprises me to this day that I actually went through with this tedious task.
+                            It was decided that <span class="c b s">all interactions with the game world</span> would be in a 
+                            <span class="c b s">diegetic format</span>.
                             <br/><br/>
-                            Every bloc of a building can be destroyed.
+                            This design choice was made to <span class="c b s">push forward a more engaging gameplay loop</span>.
                             <br/>
-                            When a projectile hits a bloc, a couple of the bloc's nearest blocs are also destroyed.
+                            It also <span class="c b s">helps in distracting</span> the player from the <span class="c b s">limited number of features</span> 
+                            of the game.
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -149,10 +266,37 @@
                     <div class="panel-title">Programming</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-name">Sébastien Lévesque (Ludwell)</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>Three Cs</li>
+                                    <li>AI</li>
+                                    <li>HUB shooting range</li>
+                                    <li>Shooting range pedestal</li>
+                                    <li>Misc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">René Adam Riché (Foolbox)</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Three Cs (screen shake, weapon mouvement)</li>
+                                    <li>Dynamic creation of map layout</li>
+                                    <li>Room templates</li>
+                                    <li>Weapon inventory & weapon management</li>
+                                    <li>Weapon pedestal</li>
+                                    <li>UI</li>
+                                    <li>Sound</li>
+                                    <li>Misc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">External resources</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Granberg. Aron, A* pathfinding project, https://arongranberg.com/astar/front</li>
                                 </ul>
                             </div>
                         </div>
@@ -162,10 +306,22 @@
                     <div class="panel-title">Design</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-name">Sébastien Lévesque (Ludwell)</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>AI</li>
+                                    <li>HUB</li>
+                                    <li>Misc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">René Adam Riché (Foolbox)</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>UI</li>
+                                    <li>Weapon</li>
+                                    <li>Misc.</li>
                                 </ul>
                             </div>
                         </div>
@@ -178,7 +334,16 @@
                             <div class="employee-name">Sébastien Lévesque</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>Enemies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">René Adam Riché (Foolbox)</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Weapons</li>
+                                    <li>Environment</li>
                                 </ul>
                             </div>
                         </div>
@@ -188,10 +353,18 @@
                     <div class="panel-title">Audio</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-name">René Adam Riché (Foolbox)</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>Player's voice.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">External resources</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Sounds and music are from https://elements.envato.com</li>
                                 </ul>
                             </div>
                         </div>
