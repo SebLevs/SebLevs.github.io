@@ -99,19 +99,20 @@
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            The UI system produced for this project uses a simple layered hierarchy where a singleton 
-                            UIManager contains UIViews (any specific UI "screen"). 
-                            The UIViews are game objects, and they can have as many UIElements (button, selectables, etc) as needed.
+                            The UI system produced for this project uses a simple <span class="c b s">layered hierarchy</span> where a 
+                            <span class="c b s">singleton UIManager</span> contains <span class="c b s">UIViews</span> (any specific UI "screen"). 
+                            The UIViews are game objects, and they can have as many <span class="c b s">UIElements</span> (button, selectables, etc) as needed.
                             <br/><br/>
-                            A system of show/hide exists on every UIView. 
+                            A <span class="c b s">system of show/hide exists on every UIView</span>. 
                             The base implementation implies a fade-in and fade-out respectively, 
-                            but a custom implementation can be extended easily on any UIView concretion.
+                            but a custom implementation <span class="c b s">can be extended easily on any UIView concretion</span>.
                             <br/><br/>
-                            UIElements can have their own concretion where needed for custom behaviours 
-                            such as a filling bar, a number counter, a text printer, etc.
+                            <span class="c b s">UIElements</span> can have their own concretion where needed for <span class="c b s"> 
+                            custom behaviours such as a filling bar, a number counter, a text printer, etc</span>.
                             <br/><br/>
-                            A system of Action (C#) is used as a callback system to chain up 
-                            views behaviours and/or transitions as needed when a show or a hide is completed.
+                            A system of 
+                            <span class="c b s"> Action (C#) is used as a callback system to chain up views </span> 
+                            <span class="c b s">behaviours and/or transitions</span> as needed when a show or a hide is completed.
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -121,7 +122,9 @@
                         <video class="secondary-visual" controls autoplay muted loop>
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
-                        <img class="secondary-visual" src="./assets/images/title banner.png">
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
                 <div class="work-panel">
@@ -131,10 +134,10 @@
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            A system was implemented to allow any entity to pickup, drop or use an object.
+                            A system was implemented to <span class="c b s">allow any entity to pickup, drop or use</span> an object.
                             <br/><br/>
-                            A simple hierarchy is used where a base class "Pickable" has children such as "Throwable" and "Weapon". 
-                            Behaviour such as OnPickup, OnDrop and OnAttack are used to dictate what happens based on the concretion at hand.
+                            A <span class="c b s">simple hierarchy</span> is used where a base class "Pickable" has children such as "Throwable" and "Weapon". 
+                            Behaviour such as <span class="c b s">OnPickup, OnDrop and OnAttack are used to dictate what happens based on the concretion</span> at hand.
                             <br/><br/>
                             A throwable would fly away OnAttack whereas a ranged weapon would fire a bullet for example.
                         </div>
@@ -143,10 +146,6 @@
                         <video class="secondary-visual" controls autoplay muted loop>
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
-                        <video class="secondary-visual" controls autoplay muted loop>
-                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
-                        </video>
-                        <img class="secondary-visual" src="./assets/images/title banner.png">
                     </div>
                 </div>
                 <div class="work-panel">
@@ -156,25 +155,23 @@
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            Scenes both load and unload in an asynchronous manner when required.
+                            Scenes both <span class="c b s">load and unload in an asynchronous manner</span> when required.
                             <br/><br/>
-                            A multiple scene hierarchy is used in Unity to avoid reloading managers 
-                            and other singleton objects that should always exists in the game environment.  
-                            A base scene contains every persistent manager and singleton.
-                            The other scenes can be loaded when required.
+                            A <span class="c b s">multiple scene hierarchy</span> is used in Unity to 
+                            <span class="c b s"> avoid reloading managers and other singleton objects </span> 
+                            that should always exists in the game environment.
+                            <br/>
+                            A <span class="c b s">base scene</span> contains every persistent manager and singleton.
+                            <br/>
+                            The <span class="c b s">other scenes</span> can be <span class="c b s">loaded when required</span>.
                             <br/><br/>
-                            This allows for decoupling every scene from any system it doesn't use 
-                            or that it doesn't require.
+                            This allows for <span class="c b s">decoupling every scene from any system it doesn't use or that it doesn't require</span>.
                         </div>
                     </div>
                     <div class="bottom"> 
                         <video class="secondary-visual" controls autoplay muted loop>
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
-                        <video class="secondary-visual" controls autoplay muted loop>
-                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
-                        </video>
-                        <img class="secondary-visual" src="./assets/images/title banner.png">
                     </div>
                 </div>
                 <div class="work-panel">
@@ -184,16 +181,18 @@
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            A simple double layer system was used for this project.
+                            A simple <span class="c b s">double layered system</span> was used for this project.
                             <br/><br/>
-                            An AudioController concretion containing AudioElements is used to call either a random sound or a specific 
-                            sound from any given AudioElement.
+                            An <span class="c b s">AudioController</span> concretion containing <span class="c b s">AudioElements</span> is 
+                            used to call either a <span class="c b s">random sound or a specific sound</span> from any given AudioElement.
                             <br/><br/>
-                            An audio source can be set for every AudioController to allow for a better 3D layering of the sound if need be.
+                            An <span class="c b s">audio source</span> can be set <span class="c b s">for every AudioController</span> to allow 
+                            for a <span class="c b s">better 3D layering</span> of the sound if need be.
                             <br/><br/>
                             <u>Retrospective</u>
                             <br/>
-                            This system still needs a lot of work to make it as modular as it should, but it does what it has to do.
+                            This system <span class="c b s">still needs a lot of work</span> to make it as modular as it should, 
+                            but it <span class="c b s">does what it has to do</span>.
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -203,7 +202,6 @@
                         <video class="secondary-visual" controls autoplay muted loop>
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
-                        <img class="secondary-visual" src="./assets/images/title banner.png">
                     </div>
                 </div>
             </div>
@@ -216,13 +214,16 @@
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            A text-based tutorial was implemented to facilitate the learning of mechanics and goals of the game.
+                            A text-based tutorial was implemented to <span class="c b s">facilitate the learning of mechanics and goals</span> of 
+                            the game.
                             <br/><br/>
-                            The player can skip the tutorial by pressing the key that would usually close 
-                            the screen he or she is viewing at that time.
+                            The player <span class="c b s">can skip the tutorial</span> by pressing the 
+                            <span class="c b s">key that would usually close the screen</span> 
+                            he or she is viewing at that time.
                             <br/><br/>
-                            Although retention is far less prominent with such a boring teaching process, 
-                            our lack of time to produce a good learning experience made this over nothing a viable solution.
+                            Although <span class="c b s">retention is far less prominent</span> with such a boring teaching process, 
+                            our <span class="c b s">lack of time</span> to produce a good learning experience 
+                            <span class="c b s">made this over nothing a viable solution</span>.
                         </div>
                     </div>
                     <div class="bottom"> 
