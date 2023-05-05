@@ -16,8 +16,6 @@ body{
     flex-direction: column;
     margin: 0;
     padding: 0;
-    /*background: linear-gradient(to right, #133917, #417d4b);*/
-    /*background: linear-gradient(to right, #181818, #353535);*/
     background: linear-gradient(to right, #20301d, #2f232f);
     text-align: justify;
 }
@@ -40,4 +38,13 @@ body{
 
 .j{
     text-align: justify;
+}
+
+.hoverable-link{
+    transition: transform 0.22s ease-out;
+}
+
+.hoverable-link:hover{
+    transform: translateY(-1px);
+    cursor: pointer;
 }

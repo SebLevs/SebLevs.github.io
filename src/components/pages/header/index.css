@@ -1,5 +1,6 @@
 header{
     position: fixed;
+    z-index: 100;
     right: 0;
     top: 0;
     width: 100%;
@@ -52,6 +53,8 @@ header nav{
 }
 
 header nav #page-link, header nav .dropdown{
+    position: relative;
+    z-index: 100;
     border-bottom: 2px solid transparent;
     transition: all 0.22s ease-out;
     margin-left: 32px;
@@ -101,6 +104,7 @@ header nav .dropdown:hover .dropdown-content {
     padding-top: 8px;
     background: linear-gradient(to right, #314a2d, #4e3a4e);
     border-radius: 0% 4px 4px 0%;
+    box-shadow: 0px 2px 0px 0.2px rgba(0,0,0,0.1);
 }
 
 .dropdown .dropdown-content .dropdown-game{

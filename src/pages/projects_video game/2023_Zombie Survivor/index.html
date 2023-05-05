@@ -51,7 +51,9 @@
             </nav>
         </header>
         <section id="project-info"> <!--components/project info.css-->
+            <h1 class="c b s">!!! UNDER CONSTRUCTION !!!</h1>
             <div id="game-img-and-links">
+                
                 <img id="game-banner" src="./assets/images/title banner.png">
                 <div id="links-icon">
                     <a href="#" target="blank"><img src="../../../components/assets/icons/icon_Github.svg"></a>
@@ -81,31 +83,125 @@
                 </div>
             </div>
             <div id="game-description" class="j">
-                Zombie Survivor is a <span class="c b s">2D Action</span> game inspired by both Vampire Survivor and Risk of Rain 
-                where <span class="c b s">the player must survive the incoming waves of enemies and grow always more powerful</span>.
-                <br/><br/>
-                For this project, I worked on <span class="c b s">AI, UI, scene management</span>, ensuring the respect of 
-                the Unity optimization guidelines and some aspects of the backend and <span class="c b s">various gameplay elements</span>.                
+                <p>
+                    Zombie Survivor is a <span class="c b s">2D Action</span> game inspired by both Vampire Survivor and Risk of Rain
+                    where <span class="c b s">the player must survive the incoming waves of enemies and grow always more powerful</span>.
+                </p>
+                <p>
+                    For this project, I worked on <span class="c b s">AI, UI, scene management</span>, ensuring the respect of
+                    the Unity optimization guidelines and some aspects of the backend and <span class="c b s">various gameplay elements</span>.
+                </p>              
             </div>
         </section>
         <section class="notable-info"> <!--index.css-->
             <div class="work-section">
                 <div class="work-type b s">PROGRAMMING</div>
-                <div class="work-panel"> <!--ACSII and destructible buildings-->
-                    <div class="panel-title">ASCII and destructible <span class="c b s">buildings</span></div>
+                <div class="work-panel">
+                    <div class="panel-title"><span class="c b s">Unity optimization</span> & <span class="c b s">Update optimization</span></div>
                     <div class="panel-info">
                         <video class="primary-visual" controls autoplay muted loop>
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            Each <span class="c b s">building is made out of 1x1 pixel blocs</span>. 
-                            Each bloc is instantiated <span class="c b s">from a two-dimensional array of characters</span> (ASCII). 
-                            It surprises me to this day that I actually went through with this tedious task.
-                            <br/><br/>
-                            <span class="c b s">Every bloc</span> of a building <span class="c b s">can be destroyed</span>.
-                            <br/>
-                            When a <span class="c b s">projectile hits a bloc</span>, a couple of the bloc's 
-                            <span class="c b s">nearest blocs are also destroyed</span>.
+                            <p>
+                                Following the <span class="c b s">official Unity performance optimization guidelines for console and PC</span>, 
+                                one goal for this project was to implement as much optimization as reasonable.
+                            </p>
+                            <p>
+                                Following the <span class="c b s">Unity guidelines</span> for optimizing the Update loop,
+                                an <span class="c b s">update manager</span> was implemented to <span class="c b s">centralize all types of updates</span>.
+                            </p>
+                            <p>
+                                This helped in <span class="c b s">reducing to a minimum the interops from C# into C++</span> every update tick.
+                            </p>                            
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <img class="secondary-visual" src="./assets/images/title banner.png">
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title"><span class="c b s">ScriptableObject</span> oriented <span class="c b s">architecture</span></div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            <p>
+                                Both <span class="c b s">scene data</span> and <span class="c b s">Audio mixer parameters</span> 
+                                were moved under a ScriptableObject architecture.
+                            </p>
+                            <p>
+                                A tool allows <span class="c b s">scene data</span> ScriptableObjects to be 
+                                <span class="c b s">created using the hierarchy of scene assets</span>.
+                                Scene data use their respective scene asset name for easy management.
+                            </p>
+                            <p>
+                                <span class="c b s">Audio mixer parameters</span> can be used by creating a
+                                <span class="c b s">ScriptableObject asset</span> which
+                                name will serve as the reference to its audio mixer's exposed parameter.
+                                This allow for a <span class="c b s">simple way to centralize the string based parameters</span>.
+                            </p>                          
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <img class="secondary-visual" src="./assets/images/title banner.png">
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title"><span class="c b s">Localization</span></div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            <p>
+                                A <span class="c b s">tab separated file</span> was used to 
+                                <span class="c b s"> create and update localized lines of text</span> 
+                                for the UI and the tutorial.
+                            </p>
+                            <p>
+                                The tab separated file is <span class="c b s">organized</span> in a way that allows for an easy understanding
+                                of the context under which the line is localized with a 
+                                <span class="c b s"> note section and headers for each language to localize the line under </span>.
+                            </p>
+                            <p>
+                                <span class="c b s">Any tab separated file can be passed through the system</span> to return a dictionary or
+                                lines localized under specific languages.
+                            </p>                         
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <img class="secondary-visual" src="./assets/images/title banner.png">
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title"><span class="c b s">User login</span> & <span class="c b s">backend</span></div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            <p>
+                                This project allows the <span class="cbs">creation of a user account</span>s well as the <span class="c b s">storing</span> 
+                                and <span class="c b s">retrieval</span> of <span class="c b s">persistent data</span>.
+                            </p>
+                            <p>
+                                The tutorial, for example, will only be played once per account.
+                            </p>
+                            <p>
+                                <a href="https://www.back4app.com/" target="_blank"><span class="c b s hoverable-link">Back4App</span></a></span>, 
+                                a backend specific web application, <span class="c b s">was used as the external database</span>.
+                            </p>                         
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -118,21 +214,63 @@
                         <img class="secondary-visual" src="./assets/images/title banner.png">
                     </div>
                 </div>
-            </div>
-            <div class="work-section">
-                <div class="work-type">DESIGN</div>
-                <div class="work-panel"> <!--ACSII and destructible buildings-->
-                    <div class="panel-title">ASCII and destructible <span class="c b s">buildings</span></div>
+                <div class="work-panel">
+                    <div class="panel-title"><span class="c b s">Scene management</span></div>
                     <div class="panel-info">
                         <video class="primary-visual" controls autoplay muted loop>
                             <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
                         </video>
                         <div class="panel-description j">
-                            Each building is made out of 1x1 pixel blocs. Each bloc is instantiated from a two-dimensional array of characters (ASCII). It surprises me to this day that I actually went through with this tedious task.
-                            <br/><br/>
-                            Every bloc of a building can be destroyed.
-                            <br/>
-                            When a projectile hits a bloc, a couple of the bloc's nearest blocs are also destroyed.
+                            <p>
+                                Scenes are loaded in an <span class="cbs">asynchronous</span> manner.
+                            </p>
+                            <p>
+                                An <span class="cbs">architecture of ScriptableObjects</span> was used to create and 
+                                use <span class="cbs">Scene Data</span>. This greatly facilitates the scene selection by the developers.
+                            </p>
+                            <p>
+                                The <span class="cbs">addressable</span> system, 
+                                implemented by Marc-Antoine Giguère, is used to manage the 
+                                <span class="cbs">loading and unloading of the scenes</span>.
+                            </p>
+                            <p>
+                                The system allows for an easy switch from and to the default asynchronous scene loading from which the current 
+                                system is based off.
+                            </p>                      
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <video class="secondary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title"><span class="c b s">Automated test</span></div>
+                    <div class="panel-info">
+                        <video class="primary-visual" controls autoplay muted loop>
+                            <source src="./assets/videos/building destruction_01.mp4" type="video/mp4">
+                        </video>
+                        <div class="panel-description j">
+                            <p>
+                                A system that <span class="c b s">automatically plays the game</span> was created to grant an
+                                easy way to test the game for both developers.
+                            </p>
+                            <p>
+                                The system uses an approach <span class="c b s">similar to that of the Chain Of Command pattern</span>.
+                                <span class="c b s">Actions are added to the player controller</span> based off of conditions for
+                                the specific test. 
+                                <span class="c b s">If any test fails, the next one in the chain checks if it can be used and so forth</span>.
+                            </span>
+                            <p>
+                                <u>Retrospective</u>
+                                <br/>
+                                The <span class="c b s">late addition of the system complicated its implementation</span>.
+                                If we had taken the time to think about the necessity of such a system during the 
+                                pre-production phase, it would have greatly facilitated its production. 
+                                This unfortunately led to a lack in a developer-oriented usability.
+                            </p>
+
                         </div>
                     </div>
                     <div class="bottom"> 
@@ -152,10 +290,36 @@
                     <div class="panel-title">Programming</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-name">Sébastien Lévesque (Ludwell)</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>AI</li>
+                                    <li>UI</li>
+                                    <li>Scene management</li>
+                                    <li>Audio</li>
+                                    <li>User login & backend</li>
+                                    <li>Misc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">
+                                <a href="https://www.marcantoinegiguere.ca/" target="_blank" class="hoverable-link">Marc-Antoine Giguère (Power Key)</a>
+                            </div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Three Cs</li>
+                                    <li>Gameplay</li>
+                                    <li>Persistent data & backend</li>
+                                    <li>Misc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">External resources</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li><a href="https://arongranberg.com/astar/front" target="_blank" class="hoverable-link">Granberg. Aron, A* pathfinding project</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -165,10 +329,24 @@
                     <div class="panel-title">Design</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-name">Sébastien Lévesque (Ludwell)</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>AI</li>
+                                    <li>UI</li>
+                                    <li>Level design (Tutorial & Practice room)</li>
+                                    <li>Gameplay</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">
+                                <a href="https://www.marcantoinegiguere.ca/" target="_blank" class="hoverable-link">Marc-Antoine Giguère (Power Key)</a>
+                            </div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Level design (main gameplay level)</li>
+                                    <li>Gameplay</li>
                                 </ul>
                             </div>
                         </div>
@@ -178,10 +356,21 @@
                     <div class="panel-title">Visual</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-name">
+                                <a href="https://www.instagram.com/starteapot/?hl=fr" target="_blank" class="hoverable-link">Marie-Maxime Giguère</a>
+                            </div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>Characters</li>
+                                    <li>Player projectile</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">External resources</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>Every environmental assets are from UNKNOWN.</li>
                                 </ul>
                             </div>
                         </div>
@@ -191,10 +380,28 @@
                     <div class="panel-title">Audio</div>
                     <div class="credits">
                         <div class="credit-panel">
-                            <div class="employee-name">Sébastien Lévesque</div>
+                            <div class="employee-name">Benoit Laroche</div>
                             <div class="employee-work">
                                 <ul>
-                                    <li>Every programming aspect was made by the owner of the project.</li>
+                                    <li>Music</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="credit-panel">
+                            <div class="employee-name">External resources</div>
+                            <div class="employee-work">
+                                <ul>
+                                    <li>UI Selection: 
+                                        <a href="https://freesound.org/people/broumbroum/sounds/50557/?fbclid=IwAR1ONbntrj8aGbL2ipBH8di0K6IPJ9zQW3ON6kyjxEMapsRJkzTW6HI-D90" target="_blank" class="b s hoverable-link">
+                                       broumbroum, sf3-sfx-menu-back.wav
+                                        </a>
+                                    </li>
+                                    <li>UI Validation: 
+                                        <a href=" https://freesound.org/people/broumbroum/sounds/50565/?fbclid=IwAR1x1-Tc-LZjz-FNw6tZitrUqwaJHDqYiiU1dN9a5FvV925iMtP2uCqLlAQ" class="b s hoverable-link">
+                                            broumbroum, sf3-sfx-menu-validate.wav
+                                        </a>
+                                    </li>
+                                    <li>Other sounds are from Krotos Starter Library sound pack</li>
                                 </ul>
                             </div>
                         </div>
