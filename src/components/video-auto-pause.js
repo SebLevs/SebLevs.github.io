@@ -1,3 +1,4 @@
+/*
 const videos = document.getElementsByTagName("video");
 const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
@@ -15,9 +16,11 @@ function loadVideosMetaData()
         videos[i].load;
     }
 }
+*/
 
 /*setInterval(setVideoStatus, 5000);*/
 
+/*
 window.addEventListener("scroll", function(event) {
 	setVideoStatus();
 });
@@ -35,3 +38,4 @@ function setVideoStatus(){
 		}
 	}
 }
+*/
