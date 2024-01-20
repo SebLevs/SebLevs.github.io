@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../components/common.css">
+        <link rel="stylesheet" href="../../../components/project info.css">
+        <link rel="stylesheet" href="../../../components/work section.css">
+        <link rel="stylesheet" href="../../../components/credit section.css">
+        <link rel="stylesheet" href="../../../components/pages/header/index.css">
+        <link rel="stylesheet" href="../../../components/pages/footer/index.css">
+        <link rel="stylesheet" href="index.css">
+        <script src="../../../components/video-auto-pause.js"></script>
+        <script src="index.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="width-device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width">
+        <title>Sébastien Lévesque | Scene Data Manager</title>
+        <link rel="icon" href="../../../components/assets/icons/icon_tab.png">
+    </head>
+    <body> <!--components/common.css-->
+        <header> <!--components/pages/header/index.css-->
+            <div id="name-and-title">
+                <a href="../../about/index.html">
+                    <p id="seb-name">Sébastien Lévesque</p>
+                    <p id="job-title">Programmer</p>
+                </a>
+            </div>
+            <div class="contact-section">
+                <span class="b s">Get in touch!</span>
+                <div class="contact">
+                    <a href="https://github.com/SebLevs" target="blank"><img src="../../../components/assets/icons/icon_Github.svg"></a>
+                    <a href="https://ludwellstudio.itch.io/" target="blank"><img src="../../../components/assets/icons/icon_Itch.svg"></a>
+                    <a href="https://www.linkedin.com/in/sebastienlevesqueslev/" target="blank"><img src="../../../components/assets/icons/icon_LinkedIn.svg"></a>
+                    <a href="mailto:sebastien.levesque.slev@gmail.com"><img src="../../../components/assets/icons/icon_email.svg"></a>
+                </div>
+            </div>   
+            <nav>
+                <a href="../../about/index.html" target="_self" id="page-link">About me</a>
+                <div class="dropdown">
+                    <span>Video game projects</span>
+                    <div class="dropdown-content">
+                        <div class="year-notation">2023-2024</div>
+                        <a href="../2024_Scene data manager/index.html" class="dropdown-game">Scene Data Manager tool</a>
+
+                        <div class="year-notation">2023</div>
+                        <a href="../2023_Zombie Survivor/index.html" class="dropdown-game">Zombie Survivor</a>
+
+                        <div class="year-notation">2022</div>
+                        <a href="../2022_Hitman Poly/index.html" class="dropdown-game">Hitman Poly</a>
+                        <a href="../2022_TBDoom/index.html" class="dropdown-game">TBDoom</a>
+
+                        <div class="year-notation">2021</div>
+                        <a href="../2021_Druidal Communion/index.html" class="dropdown-game">Druidal Communion</a>
+                        <a href="../2021_Mischievous Fluffball/index.html" class="dropdown-game">Mischievous Fluffball</a>
+
+                        <div class="year-notation ">2020</div>
+                        <a href="../2020_Space Invaders/index.html" class="dropdown-game">Space Invaders</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span>Other projects</span>
+                    <div class="dropdown-content">
+                        <div class="year-notation">2023</div>
+                        <a href="../../projects_other/2023_Chaac Technologies/index.html" class="dropdown-game">VR E-learning</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="project-info"> <!--components/project info.css-->
+            <div id="game-img-and-links">
+                <img id="game-banner" src="./assets/images/title banner.png">
+                <div id="links-icon">
+                    <a href="https://github.com/SebLevs/ludwell.unity-scene" target="blank"><img src="../../../components/assets/icons/icon_Github.svg"></a>
+                </div>
+            </div>
+            <div id="info-container">
+                <div class="info"> <!--Engine-->
+                    <img src="../../../components/assets/icons/icon_Unity.png">
+                    <div>Unity</div>
+                </div>
+                <div class="info"> <!--Production date-->
+                    <img src="../../../components/assets/icons/icon_calendar.svg">
+                    <div>2023-2024</div>
+                </div>
+                <div class="info"> <!--Production duration-->
+                    <img src="../../../components/assets/icons/icon_clock.svg">
+                    <div>In production</div>
+                </div>
+                <div class="info"> <!--Project Genre-->
+                    <img src="../../../components/assets/icons/icon_tag.svg">
+                    <div>Tool | UI</div>
+                </div>
+                <div class="info"> <!--Team size-->
+                    <img src="../../../components/assets/icons/icon_user.svg">
+                    <div>1</div>
+                </div>
+            </div>
+            <div id="game-description" class="j">
+                <p>
+                    This project is an answer to the hassle of handling scenes in big projects under Unity Engine.
+                </p>
+                <p>
+                    Scene Data Manager is a <span class="c b s">tool</span> that allows for an <span class="c b s">easy management of scenes</span> 
+                    through <span class="c b s">scriptable objects</span> called <span class="c b s">scene data</span>.
+                </p>
+            </div>
+        </section>
+        <section class="notable-info"> <!--components/work section.css-->
+            <div class="work-section">
+                <div class="work-type b s">Data</div>
+                <div class="work-panel">
+                    <div class="panel-title">A scene asset usable from anywhere</div>
+                    <div class="panel-info">
+                        <img class="primary-visual" src="./assets/images/scene data scritpable object.png">
+                        <div class="panel-description j">
+                            <p>
+                                Upon creating a new scene asset, a scene data <span class="c b s">scriptable object</span> is also created at the same path and the 
+                                <span class="c b s">scene asset is automatically linked to it</span>.
+                            </p>
+                            <p>
+                                The scene data can thereafter be used as a proxy for the scene asset, allowing for 
+                                <span class="c b s">easy access to the scene asset from anywhere</span> in the project.
+                            </p>
+                            <p>
+                                The base core scenes (Main menu, Persistent, Loading) are also available to the user through a singular scriptable object.
+                            </p>                       
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <img class="secondary-visual" src="./assets/gifs/scene data creation.gif">
+                    </div>
+                </div>
+            </div>
+            <div class="work-section">
+                <div class="work-type b s">Visual</div>
+                <div class="work-panel">
+                    <div class="panel-title">Following the UI scheme of Unity</span></div>
+                    <div class="panel-info">
+                        <img class="primary-visual" src="./assets/images/visual_quick load.png">
+                        <div class="panel-description j">
+                            <p>
+                                The UI of the tool is <span class="c b s">simple and intuitive</span>, following the UI scheme of Unity and the Gestalt laws.
+                            </p>
+                            <p>
+
+                            </p>                          
+                        </div>
+                    </div>
+                    <!--<div class="bottom"> 
+                        <img class="secondary-visual" src="./assets/images/Update Manager.png">
+                    </div>-->
+                </div>
+            </div>
+            <div class="work-section">
+                <div class="work-type b s">Programming</div>
+                <div class="work-panel">
+                    <div class="panel-title"><span class="c b s">Custom dropdown</span> implementation</div>
+                    <div class="panel-info">
+                        <img class="primary-visual" src="./assets/gifs/custom dropdown.gif">
+                        <div class="panel-description j">
+                            <p>
+                                The default editor dropdown was lacking in both visual and code features.<br/>
+                                I decided that it would be best if I <span class="c b s">create my own</span> while using some elements from Unity default like the listview element.
+                            </p>
+                            <p>
+                                In details:
+                                <ul>
+                                    <li>
+                                        If the user types in the search bar, the dropdown will <span class="c b s">find every header that contains the input</span> 
+                                        and populate the dropdown listview with the results.
+                                    </li>
+                                    <li>
+                                        The dropdown <span class="c b s">position is absolute</span> and 
+                                        <span class="c b s">automatically position itself</span> as a child of the RootVisualContainer element in the hierarchy.<br/>
+                                        The dropdown will therefore always be visible to the user, wherever it's owner is originally placed in the hierarchy.
+                                    </li>
+                                    <li>
+                                        The dropdown is composed of buttons.<br/>
+                                    </li>
+                                    <li>
+                                        Each button is associated with an element of the list view.
+                                    </li>
+                                    <li>
+                                        A <span class="c b s">custom behaviour</span> may be dictated by the programmer for the <span class="c b s">click event</span> of any of the dropdown elements.
+                                    </li>
+                                </ul>
+                                 
+                            </p>                          
+                        </div>
+                    </div>
+                    <!--<div class="bottom"> 
+                        <img class="secondary-visual" src="./assets/images/Update Manager.png">
+                    </div>-->
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title">Better <span class="c b s">visual element initialization</span> and <span class="c b s">extension methods</span></div>
+                    <div class="panel-info">
+                        <img class="primary-visual" src="./assets/images/extension methods_initialization.png">
+                        <div class="panel-description j">
+                            <p>
+                                Extension methods were used to allow an easier initialization of VisualElements through the reference of UXML and USS files.<br/>
+                                This provides a <span class="c b s">cleaner code</span> and <span class="c b s">easier maintenance</span>.
+                            </p>
+                            <p>
+                                Extension methods were also implemented to facilitate specific actions related to visual elements.
+                            </p>                         
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <img class="secondary-visual" src="./assets/images/extension methods_general.png">
+                    </div>
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title">Making the usage of listviews more intuitive</div>
+                    <div class="panel-info">
+                        <img class="primary-visual" src="./assets/images/ListViewInitializer.png">
+                        <div class="panel-description j">
+                            <p>
+                                The listview element is a powerful tool that allows for the virtualization of visual elements.<br/>
+                                However, it is not the most intuitive to use.<br/>
+                                I decided to <span class="c b s">create a utility class</span> for the listview element that would make it easier to use.
+                            </p>
+                            <p>
+                                Given a list to bind to, <span class="c b s">adding and binding elements</span> to the listview is <span class="c b s">now 
+                                managed automatically</span> by the utility class.
+                            </p>
+                            <p>
+                                Behaviours may be added to the utility class in the future, as the need arises.
+                            </p>                         
+                        </div>
+                    </div>
+                    <!--<div class="bottom"> 
+                        <img class="secondary-visual" src="./assets/images/Update Manager.png">
+                    </div>-->
+                </div>
+                <div class="work-panel">
+                    <div class="panel-title">Quickly <span class="c b s">open</span> and <span class="c b s">load</span> scenes</div>
+                    <div class="panel-info">
+                        <img class="primary-visual" src="./assets/gifs/load and open.gif">
+                        <div class="panel-description j">
+                            <p>
+                                A <span class="c b s">quick load</span> button as well as a <span class="c b s">quick open</span> button are available and always visible to the user.
+                            </p>
+                            <p>
+                                The buttons are centered and placed above the reference name of the loader scene data for an intuitive usage.
+                            </p>                         
+                        </div>
+                    </div>
+                    <!--<div class="bottom"> 
+                        <img class="secondary-visual" src="./assets/images/Update Manager.png">
+                    </div>-->
+                </div>
+            </div>
+            <div class="work-section">
+                <div class="work-type">CREDITS</div> <!--components/credit section.css-->
+                <div class="work-panel"> <!--programming-->
+                    <div class="panel-title">Everything</div>
+                    <div class="credits">
+                        <div class="credit-panel">
+                            <div class="employee-name">Sébastien Lévesque (Ludwell)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer> <!--components/pages/footer/index.css-->
+            <div> &copy; 2024 Sébastien Lévesque | All rights reserved </div>
+        </footer>
+    </body>
+</html>
